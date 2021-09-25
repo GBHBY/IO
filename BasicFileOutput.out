@@ -1,0 +1,28 @@
+1: package part01;
+2: 
+3: import java.io.*;
+4: 
+5: /**
+6:  * @author gb
+7:  * @version 1.0
+8:  * description:
+9:  * @date 2021/8/9 13:08
+10:  */
+11: 
+12: public class BasicFileOutput {
+13:     static String file = "BasicFileOutput.out";
+14: 
+15:     public static void main(String[] args)
+16:             throws IOException, ClassNotFoundException, NoSuchMethodException {
+17:         BufferedReader in = new BufferedReader(new FileReader("G:\\IntelliJ IDEAWorkplace\\IO\\src\\main\\java\\part01\\BasicFileOutput.java"));
+18:         PrintWriter out = new PrintWriter(
+19:                 new BufferedWriter(new FileWriter(file)));
+20:         int lineCount = 1;
+21:         String s;
+22:         while ((s = in.readLine()) != null)
+23:             out.println(lineCount++ + ": " + s);
+24:         out.close();
+25:         // Show the stored file:
+26: //        System.out.println(BufferedInputFile.read(file));
+27:     }
+28: }
